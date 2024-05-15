@@ -1,20 +1,243 @@
-[{"id":1,"name":"Layne","phone_number":"713-584-6751","email":"lrentoll0@paginegialle.it","address":"Suite 42","image":"http://dummyimage.com/170x100.png/5fa2dd/ffffff"},
-{"id":2,"name":"Jonell","phone_number":"539-727-1479","email":"jgent1@histats.com","address":"Suite 16","image":"http://dummyimage.com/226x100.png/5fa2dd/ffffff"},
-{"id":3,"name":"Gertie","phone_number":"821-810-4516","email":"glangley2@fda.gov","address":"18th Floor","image":"http://dummyimage.com/123x100.png/ff4444/ffffff"},
-{"id":4,"name":"Darby","phone_number":"524-746-9752","email":"dcolbrun3@loc.gov","address":"Suite 14","image":"http://dummyimage.com/221x100.png/dddddd/000000"},
-{"id":5,"name":"Gwyn","phone_number":"698-159-6327","email":"gvasyunin4@weibo.com","address":"PO Box 84563","image":"http://dummyimage.com/150x100.png/dddddd/000000"},
-{"id":6,"name":"Mira","phone_number":"703-188-0893","email":"mboal5@wp.com","address":"Room 538","image":"http://dummyimage.com/138x100.png/cc0000/ffffff"},
-{"id":7,"name":"Rora","phone_number":"517-386-1513","email":"rburder6@skype.com","address":"Suite 11","image":"http://dummyimage.com/221x100.png/cc0000/ffffff"},
-{"id":8,"name":"Alethea","phone_number":"737-517-9776","email":"alemmens7@ucoz.ru","address":"Room 1584","image":"http://dummyimage.com/213x100.png/5fa2dd/ffffff"},
-{"id":9,"name":"Aeriell","phone_number":"971-428-3814","email":"aphilpin8@hc360.com","address":"Room 1592","image":"http://dummyimage.com/114x100.png/cc0000/ffffff"},
-{"id":10,"name":"Dud","phone_number":"480-818-9704","email":"dbuckell9@live.com","address":"Room 1000","image":"http://dummyimage.com/225x100.png/cc0000/ffffff"},
-{"id":11,"name":"Chad","phone_number":"605-256-5914","email":"ceverissa@state.tx.us","address":"14th Floor","image":"http://dummyimage.com/107x100.png/ff4444/ffffff"},
-{"id":12,"name":"Berkly","phone_number":"678-326-3683","email":"blowndesb@live.com","address":"Suite 58","image":"http://dummyimage.com/193x100.png/cc0000/ffffff"},
-{"id":13,"name":"Vanya","phone_number":"869-530-9849","email":"vmarinerc@php.net","address":"PO Box 34208","image":"http://dummyimage.com/206x100.png/cc0000/ffffff"},
-{"id":14,"name":"Muire","phone_number":"811-973-1852","email":"mtumiotod@upenn.edu","address":"PO Box 36801","image":"http://dummyimage.com/216x100.png/5fa2dd/ffffff"},
-{"id":15,"name":"Abdel","phone_number":"854-602-8284","email":"aconroye@gravatar.com","address":"12th Floor","image":"http://dummyimage.com/246x100.png/ff4444/ffffff"},
-{"id":16,"name":"Forbes","phone_number":"128-852-4791","email":"fdimitrescuf@vinaora.com","address":"PO Box 51467","image":"http://dummyimage.com/144x100.png/dddddd/000000"},
-{"id":17,"name":"Fanni","phone_number":"155-293-2986","email":"fcornhillg@mit.edu","address":"Apt 1701","image":"http://dummyimage.com/241x100.png/cc0000/ffffff"},
-{"id":18,"name":"Rolfe","phone_number":"691-241-3891","email":"rquelchh@huffingtonpost.com","address":"Suite 93","image":"http://dummyimage.com/220x100.png/ff4444/ffffff"},
-{"id":19,"name":"Amory","phone_number":"407-181-0568","email":"aprovosti@arstechnica.com","address":"16th Floor","image":"http://dummyimage.com/109x100.png/5fa2dd/ffffff"},
-{"id":20,"name":"Janka","phone_number":"238-320-6320","email":"jbourtoumieuxj@aol.com","address":"PO Box 10931","image":"http://dummyimage.com/229x100.png/cc0000/ffffff"}]
+[
+    {
+      "id": 1,
+      "name": "Layne",
+      "phone_number": "713-584-6751",
+      "email": "lrentoll0@paginegialle.it",
+      "address": "Suite 42",
+      "image": "http://dummyimage.com/170x100.png/5fa2dd/ffffff",
+      "location": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jonell",
+      "phone_number": "539-727-1479",
+      "email": "jgent1@histats.com",
+      "address": "Suite 16",
+      "image": "http://dummyimage.com/226x100.png/5fa2dd/ffffff",
+      "location": {
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      }
+    },
+    {
+      "id": 3,
+      "name": "Gertie",
+      "phone_number": "821-810-4516",
+      "email": "glangley2@fda.gov",
+      "address": "18th Floor",
+      "image": "http://dummyimage.com/123x100.png/ff4444/ffffff",
+      "location": {
+        "latitude": 40.7128,
+        "longitude": -74.006
+      }
+    },
+    {
+      "id": 4,
+      "name": "Darby",
+      "phone_number": "524-746-9752",
+      "email": "dcolbrun3@loc.gov",
+      "address": "Suite 14",
+      "image": "http://dummyimage.com/221x100.png/dddddd/000000",
+      "location": {
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    },
+    {
+      "id": 5,
+      "name": "Gwyn",
+      "phone_number": "698-159-6327",
+      "email": "gvasyunin4@weibo.com",
+      "address": "PO Box 84563",
+      "image": "http://dummyimage.com/150x100.png/dddddd/000000",
+      "location": {
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      }
+    },
+    {
+      "id": 6,
+      "name": "Mira",
+      "phone_number": "703-188-0893",
+      "email": "mboal5@wp.com",
+      "address": "Room 538",
+      "image": "http://dummyimage.com/138x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 51.509865,
+        "longitude": -0.118092
+      }
+    },
+    {
+      "id": 7,
+      "name": "Rora",
+      "phone_number": "517-386-1513",
+      "email": "rburder6@skype.com",
+      "address": "Suite 11",
+      "image": "http://dummyimage.com/221x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 34.052235,
+        "longitude": -118.243683
+      }
+    },
+    {
+      "id": 8,
+      "name": "Alethea",
+      "phone_number": "737-517-9776",
+      "email": "alemmens7@ucoz.ru",
+      "address": "Room 1584",
+      "image": "http://dummyimage.com/213x100.png/5fa2dd/ffffff",
+      "location": {
+        "latitude": 40.73061,
+        "longitude": -73.935242
+      }
+    },
+    {
+      "id": 9,
+      "name": "Aeriell",
+      "phone_number": "971-428-3814",
+      "email": "aphilpin8@hc360.com",
+      "address": "Room 1592",
+      "image": "http://dummyimage.com/114x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 40.758896,
+        "longitude": -73.98513
+      }
+    },
+    {
+      "id": 10,
+      "name": "Dud",
+      "phone_number": "480-818-9704",
+      "email": "dbuckell9@live.com",
+      "address": "Room 1000",
+      "image": "http://dummyimage.com/225x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 51.528308,
+        "longitude": -0.381784
+      }
+    },
+    {
+      "id": 11,
+      "name": "Chad",
+      "phone_number": "605-256-5914",
+      "email": "ceverissa@state.tx.us",
+      "address": "14th Floor",
+      "image": "http://dummyimage.com/107x100.png/ff4444/ffffff",
+      "location": {
+        "latitude": 40.712776,
+        "longitude": -74.005974
+      }
+    },
+    {
+      "id": 12,
+      "name": "Berkly",
+      "phone_number": "678-326-3683",
+      "email": "blowndesb@live.com",
+      "address": "Suite 58",
+      "image": "http://dummyimage.com/193x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 51.5033,
+        "longitude": -0.1195
+      }
+    },
+    {
+      "id": 13,
+      "name": "Vanya",
+      "phone_number": "869-530-9849",
+      "email": "vmarinerc@php.net",
+      "address": "PO Box 34208",
+      "image": "http://dummyimage.com/206x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    },
+    {
+      "id": 14,
+      "name": "Muire",
+      "phone_number": "811-973-1852",
+      "email": "mtumiotod@upenn.edu",
+      "address": "PO Box 36801",
+      "image": "http://dummyimage.com/216x100.png/5fa2dd/ffffff",
+      "location": {
+        "latitude": 40.7128,
+        "longitude": -74.006
+      }
+    },
+    {
+      "id": 15,
+      "name": "Abdel",
+      "phone_number": "854-602-8284",
+      "email": "aconroye@gravatar.com",
+      "address": "12th Floor",
+      "image": "http://dummyimage.com/246x100.png/ff4444/ffffff",
+      "location": {
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      }
+    },
+    {
+      "id": 16,
+      "name": "Forbes",
+      "phone_number": "128-852-4791",
+      "email": "fdimitrescuf@vinaora.com",
+      "address": "PO Box 51467",
+      "image": "http://dummyimage.com/144x100.png/dddddd/000000",
+      "location": {
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    },
+    {
+      "id": 17,
+      "name": "Fanni",
+      "phone_number": "155-293-2986",
+      "email": "fcornhillg@mit.edu",
+      "address": "Apt 1701",
+      "image": "http://dummyimage.com/241x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      }
+    },
+    {
+      "id": 18,
+      "name": "Rolfe",
+      "phone_number": "691-241-3891",
+      "email": "rquelchh@huffingtonpost.com",
+      "address": "Suite 93",
+      "image": "http://dummyimage.com/220x100.png/ff4444/ffffff",
+      "location": {
+        "latitude": 40.73061,
+        "longitude": -73.935242
+      }
+    },
+    {
+      "id": 19,
+      "name": "Amory",
+      "phone_number": "407-181-0568",
+      "email": "aprovosti@arstechnica.com",
+      "address": "16th Floor",
+      "image": "http://dummyimage.com/109x100.png/5fa2dd/ffffff",
+      "location": {
+        "latitude": 40.7128,
+        "longitude": -74.006
+      }
+    },
+    {
+      "id": 20,
+      "name": "Janka",
+      "phone_number": "238-320-6320",
+      "email": "jbourtoumieuxj@aol.com",
+      "address": "PO Box 10931",
+      "image": "http://dummyimage.com/229x100.png/cc0000/ffffff",
+      "location": {
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    }
+  ]
+  
