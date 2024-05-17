@@ -4,6 +4,7 @@ const router = require("./Routes/api");
 
 const clientsRouter = require("./Routes/clients");
 const salesPersonRouter = require("./Routes/salesPerson");
+const meetingRouter = require("./Routes/meetings");
 
 const cors = require("cors");
 const app = express();
@@ -16,9 +17,11 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
+app.use(express.json());
 
 app.use(clientsRouter);
 app.use(salesPersonRouter);
+app.use(meetingRouter);
 
 mongoose.connect(
   "mongodb+srv://natashasharif:FDpdO6bYchNwIaYg@user-management-cluster.o30ud6m.mongodb.net/?retryWrites=true&w=majority&appName=User-Management-Cluster",

@@ -13,7 +13,6 @@ const salesPersonsSchema = new mongoose.Schema({
     image: { type: String, required: false },
     location: { type: locationSchema, required: true }
 
-
 })
 const salesPersonsModel = mongoose.model('salesPersons', salesPersonsSchema)
 
