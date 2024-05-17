@@ -5,7 +5,6 @@ const express = require('express')
 router.get("/clients", async (req, res) => {
   try {
     const result = await clientModel.find();
-    console.log(result, "Result");
     res.json(result);
   } catch (error) {
     console.error(error);
