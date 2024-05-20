@@ -32,7 +32,6 @@ router.get("/salesPersons/:id", async (req, res) => {
           salesPerson,
           associatedClients
         };
-        console.log(response,"response in route")
           return res.status(200).json(response)
       }
   } catch (error) {

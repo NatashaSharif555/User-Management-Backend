@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const meetingsSchema = new mongoose.Schema({
+  salesPersonId: {
+    type: String,
+    required: true
+  },
   clientId: {
     type: String,
     required: true,

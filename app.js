@@ -25,7 +25,11 @@ app.use(meetingRouter);
 
 mongoose.connect(
   "mongodb+srv://natashasharif:FDpdO6bYchNwIaYg@user-management-cluster.o30ud6m.mongodb.net/?retryWrites=true&w=majority&appName=User-Management-Cluster",
-  {}
+  {
+    connectTimeoutMS: 10000, 
+    serverSelectionTimeoutMS: 10000,
+
+  }
 );
 const db = mongoose.connection;
 app.use(router);
