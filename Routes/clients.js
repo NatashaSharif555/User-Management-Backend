@@ -1,7 +1,8 @@
 const router = require('../Routes/api')
 const mongoose = require("mongoose");
 const clientModel = require("../Models/clientModel")
-const express = require('express')
+const express = require('express');
+const salesPersonsModel = require('../Models/salesPersonsModel');
 router.get("/clients", async (req, res) => {
   try {
     const result = await clientModel.find();
@@ -11,24 +12,35 @@ router.get("/clients", async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
-
 router.get("/clients/:id", async (req, res) => {
   try {
-    clientId = req.params.id;
+    const clientId = req.params.id;
     if (!mongoose.isValidObjectId(clientId)) {
       return res.status(400).json({ message: "Invalid client ID" });
     }
-    client = await clientModel.findById(clientId);
+    const client = await clientModel.findOne({ _id: clientId });
+    console.log(client, "Client");
+
     if (!client) {
       return res.status(404).json({ message: "Client Not Found!" });
     } else {
-      res.json(client);
+      const associatedSalesPersons = await salesPersonsModel.find({ id: client.salesPersonId });
+      console.log(associatedSalesPersons, "Associated sales persons");
+
+      const response = {
+        client,
+        associatedSalesPersons
+      };
+
+      console.log(response, "response")
+      res.json(response);
     }
   } catch (error) {
-    res.status(500).json({ message: "Internal Server Error!" });
     console.log(error);
+    res.status(500).json({ message: "Internal Server Error!" });
   }
 });
+
 
 
 module.exports = router

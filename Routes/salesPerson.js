@@ -16,28 +16,34 @@ router.get("/salesPersons", async (req, res) => {
 
 router.get("/salesPersons/:id", async (req, res) => {
   try {
-    salesPersonId = req.params.id;
-    if (!mongoose.isValidObjectId) {
+    const salesPersonId = req.params.id;
+
+    if (!mongoose.isValidObjectId(salesPersonId)) {
       return res.status(400).json({ message: "Invalid Sales Person Id" });
     }
-    salesPerson = await salesPersonsModel.findById(salesPersonId);
 
-    const associatedClients = await clientsModel.find().sort({ createdAt: 1 }).limit(3);
+    const salesPerson = await salesPersonsModel.findById(salesPersonId);
+    if (!salesPerson) {
+      return res.status(404).json({ message: "Sales Person not found" });
+    }
 
-      if (!salesPerson) {
-          return res.status(404).json({message:"Sales Person not found"})
-      }
-      else {
-        const response = {
-          salesPerson,
-          associatedClients
-        };
-          return res.status(200).json(response)
-      }
+    const clientIds = salesPerson.clientId[0].split(',').map(id => parseInt(id.trim()));
+
+    const associatedClients = await clientsModel.find({ id: { $in: clientIds } });
+
+    const response = {
+      salesPerson,
+      associatedClients
+    };
+    return res.status(200).json(response);
+
   } catch (error) {
-    res.status(500).json({ message: "Internal Server Error" })
-    
+    console.error(error); 
+    res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
+module.exports = router;
+
 
 module.exports = router;
