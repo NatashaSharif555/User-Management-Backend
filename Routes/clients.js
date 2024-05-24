@@ -19,20 +19,16 @@ router.get("/clients/:id", async (req, res) => {
       return res.status(400).json({ message: "Invalid client ID" });
     }
     const client = await clientModel.findOne({ _id: clientId });
-    console.log(client, "Client");
 
     if (!client) {
       return res.status(404).json({ message: "Client Not Found!" });
     } else {
       const associatedSalesPersons = await salesPersonsModel.find({ id: client.salesPersonId });
-      console.log(associatedSalesPersons, "Associated sales persons");
-
       const response = {
         client,
         associatedSalesPersons
       };
 
-      console.log(response, "response")
       res.json(response);
     }
   } catch (error) {

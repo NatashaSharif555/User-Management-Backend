@@ -26,34 +26,32 @@ router.get("/getMeetings/:id", async (req, res) => {
     }
     const clientIds = [...new Set(meetings.map((meeting) => meeting.clientId))];
  
-    console.log(clientIds, "clientIds");
  
     // Fetch client details
     const clients = await clientModel.find({ _id: { $in: clientIds } });
-    console.log(clients, "clients");
     const clientMap = clients.reduce((acc, client) => {
       acc[client._id] = {
         name: client.name,
         location: client.location,
+        address: client.address
       };
  
       return acc;
     }, {});
  
-    console.log(clientMap, "map");
     // Attach client names to meetings
     const meetingsWithClientNames = meetings.map(
       (meeting) => (
-        console.log(meeting, "meeting"),
         {
           ...meeting.toObject(),
           clientName: clientMap[meeting.clientId]?.name,
           location: clientMap[meeting.clientId]?.location,
+          address: clientMap[meeting.clientId]?.address,
+
         }
       )
     );
  
-    console.log(meetingsWithClientNames, "meetingsWithClientNames");
  
     res.status(200).json(meetingsWithClientNames);
   } catch (e) {
